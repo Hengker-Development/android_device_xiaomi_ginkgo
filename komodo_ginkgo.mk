@@ -23,20 +23,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from ginkgo device
 $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
-# Inherit some common ArrowOS stuff
+# Inherit some common Komodo OS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_CHARGER := true
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/komodo/config/common.mk)
+
+# Komodo Stuff
+KOMODO_OFFICIAL := true
+KOMODO_GAPPS_TYPE := nogapps
+KOMODO_VARIANT := RELEASE
 
 # b/189477034: Bypass build time check on uses_libs until vendor fixes all their apps
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 RELAX_USES_LIBRARY_CHECK := true
 
 # Device identifier
-PRODUCT_NAME := arrow_ginkgo
+PRODUCT_NAME := komodo_ginkgo
 PRODUCT_DEVICE := ginkgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8/8T
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-DEVICE_MAINTAINER := Adithya (ghostrider_reborn)
