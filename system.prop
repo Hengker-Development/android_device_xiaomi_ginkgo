@@ -66,6 +66,11 @@ ro.netflix.bsp_rev=Q6125-17995-1
 # RIL
 persist.sys.fflag.override.settings_provider_model=false
 
+# SkiaGL Threaded
+debug.renderengine.backend=skiaglthreaded
+debug.hwui.renderer=skiagl
+renderthread.skia.reduceopstasksplitting=true
+
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440

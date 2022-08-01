@@ -92,6 +92,9 @@ GNSS_HIDL_VERSION := 2.1
 LOC_HIDL_VERSION := 4.0
 TARGET_USES_HARDWARE_QCOM_GPS := false
 
+#Graphics
+USE_OPENGL_RENDERER := true
+
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
