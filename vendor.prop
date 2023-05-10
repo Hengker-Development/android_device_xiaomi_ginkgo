@@ -236,6 +236,13 @@ persist.vendor.sensors.support_direct_channel=false
 ro.soc.manufacturer=QTI
 ro.soc.model=SM6125
 
+# LMKD
+ro.config.low_ram=false
+ro.lmk.critical_upgrade=true
+ro.lmk.upgrade_pressure=40
+ro.lmk.downgrade_pressure=60
+ro.lmk.kill_heaviest_task=false
+
 # SurfaceFlinger
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=10500000
