@@ -418,8 +418,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map.conf \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-normal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-normal.conf
 
-# Speed profile services and wifi-service to reduce RAM and storage.
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+# Speed profile services and wifi-service to reduce RAM and s>
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := everything
 
 # Always preopt extracted APKs to prevent extracting out of the APK for gms
 # modules.
