@@ -86,6 +86,8 @@ on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
     setprop dalvik.vm.dex2oat-filter=quicken
     setprop dalvik.vm.image-dex2oat-filter=quicken
+    setprop dalvik.vm.dex2oat-minidebuginfo=false
+    setprop dalvik.vm.minidebuginfo=false
 
 on property:sys.boot_completed=1
     write /dev/stune/schedtune.prefer_idle 0
