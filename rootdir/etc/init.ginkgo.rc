@@ -76,14 +76,16 @@ on property:ro.boot.hwversion=*
 
 on property:persist.sys.device_provisioned=1
     # Use foreground cpuset for dex2oat
-    setprop dalvik.vm.dex2oat-filter=speed
-    setprop dalvik.vm.image-dex2oat-filter=speed
+    setprop dalvik.vm.dex2oat64.enabled=true
     setprop ro.vendor.qti.am.reschedule_service=true
     setprop ro.sys.fw.dex2oat_thread_count=8
     setprop dalvik.vm.boot-dex2oat-threads=8
     setprop dalvik.vm.dex2oat-threads=8
-    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,5,6,7
-    setprop dalvik.vm.dex2oat-threads 6
+    setprop dalvik.vm.image-dex2oat-threads=8
+    setprop dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
+    setprop dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+    setprop dalvik.vm.dex2oat-filter=quicken
+    setprop dalvik.vm.image-dex2oat-filter=quicken
 
 on property:sys.boot_completed=1
     write /dev/stune/schedtune.prefer_idle 0
